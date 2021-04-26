@@ -1,0 +1,87 @@
+.process{
+  padding: 20px 0 30px;
+  text-align: center;
+
+  @include media(">=small-mobile"){
+    padding: 50px 0;
+  }
+
+  @include media(">=mobile"){
+    padding: 100px 0;
+  }
+
+  .heading{
+    margin: 0 0 40px;
+
+    @include media(">=mobile"){
+      margin: 0 0 80px;
+    }
+  }
+
+  .steps-holder{
+    display: flex;
+    flex-wrap: wrap;
+    font: 13px/22px $lato-font-regular;
+    color: $gray-light;
+    margin: 0 0 10px;
+
+    @include media(">=mobile"){
+      margin: 0 0 80px;
+    }
+  }
+
+  .step{
+    width: 100%;
+    position: relative;
+    padding: 0 30px;
+    margin: 0 0 30px;
+
+    @include media(">=small-mobile"){
+      width: 50%;
+    }
+
+    @include media(">=mobile"){
+      width: 25%;
+      margin: 0;
+
+      &:after{
+        content: '';
+        position: absolute;
+        background-image: url(../images/arrow.jpg);
+        top: -30px;
+        left: 100%;
+        transform: translateX(-50%) rotate(180deg);
+        width: 152px;
+        height: 47px;
+      }
+
+      &:nth-child(even){
+        &:after {
+          transform: translateX(-50%) rotate(0);
+          top: 70px;
+        }
+      }
+
+      &:last-child:after{
+        display: none;
+      }
+    }
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .title{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: $blue-dark;
+    margin: 0 0 27px;
+    display: inline-block;
+  }
+
+  .img-holder{
+    margin: 0 0 20px;
+  }
+}

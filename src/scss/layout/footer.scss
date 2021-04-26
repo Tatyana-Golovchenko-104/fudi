@@ -1,0 +1,107 @@
+#footer{
+  border-top: 1px solid #e3e7ec;
+  padding: 25px 0 0;
+
+  @include media(">=mobile") {
+    padding: 50px 0 0;
+  }
+
+  .holder{
+    text-align: center;
+    margin: 0 0 20px;
+
+    @include media(">=mobile") {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+.nav{
+  ul{
+    margin: 0 0 20px;
+    font: 13px/18px $lato-font-regular;
+    text-transform: uppercase;
+
+    @include media(">=mobile") {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  li{
+    @include media("<mobile"){
+      margin: 0 0 5px;
+    }
+
+    @include media(">=mobile") {
+      padding: 0 10px;
+    }
+  }
+
+  a{
+    color: $gray-light;
+    text-decoration: none;
+
+    &:hover{
+      color: $yellow;
+    }
+  }
+}
+
+.telephone{
+  display: inline-block;
+  position: relative;
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 24px;
+
+  &:before{;
+    color: #6e6e6e;
+    position: absolute;
+    left: -28px;
+    top: 3px;
+  }
+
+  a{
+    color: $blue-dark;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.social-media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li{
+    padding: 0 7px;
+  }
+
+  a{
+    display: inline-block;
+    text-decoration: none;
+    color: $blue;
+    font-size: 18px;
+
+    &:hover{
+      color: $yellow;
+    }
+  }
+}
+
+.copyright{
+  text-align: center;
+  background: $blue;
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 24px;
+  color: $white;
+
+  p{
+    margin: 0;
+  }
+}

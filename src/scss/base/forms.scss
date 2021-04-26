@@ -1,0 +1,63 @@
+// -----------------------------------------------------
+// Form elements.
+// forms
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="number"],
+input[type="mail"],
+textarea {
+  border-radius: 0;
+  box-sizing:border-box;
+  outline:none;
+  border: 1px solid $gray;
+  color: $black;
+  background: $white;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 12px;
+  -webkit-appearance: none;
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:-moz-placeholder{
+    color: $black;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  -webkit-border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  cursor: pointer;
+}
+

@@ -1,0 +1,118 @@
+.price-block{
+  background: $gray-lighter;
+  padding: 50px 0;
+
+  @include media(">=mobile"){
+    padding: 130px 0;
+  }
+}
+
+.price-list{
+  @include media(">=mobile"){
+    display: flex;
+    justify-content: center;
+  }
+
+  .box{
+    width: 100%;
+    background: $white;
+    border: 1px solid $blue-light;
+    border-radius: 2px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    margin: 0 5px 10px;
+    color: $gray-light;
+    transition: width .1s linear, background-color .1s linear, margin .1s linear, padding .1s linear, color .1s linear;
+
+    @include media(">=mobile"){
+      width: 350px;
+      padding: 50px 20px;
+    }
+
+    .holder{
+      position: relative;
+      z-index: 2;
+    }
+
+    .title{
+      display: block;
+      font: 20px/30px $lato-font-regular;
+      margin: 0 0 15px;
+
+      @include media(">=mobile"){
+        font-size: 25px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .price{
+      display: block;
+      color: $yellow;
+      font:bold 50px/64px $lato-font-regular;
+      margin: 0 0 25px;
+
+      @include media(">=mobile"){
+        font-size: 60px;
+      }
+
+      sup{
+        font-size: 40px;
+
+        @include media(">=mobile"){
+          font-size: 60px;
+        }
+      }
+
+      span{
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    .list{
+      margin-bottom: 15px;
+      font: 13px/40px $lato-font-regular;
+
+      li{
+        border-top: 1px solid #ccd5df;
+      }
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: $blue;
+      opacity: 0;
+      transition: opacity .1s linear, left .1s linear, right .1s linear, top .1s linear, bottom .1s linear;
+    }
+
+    &.active,
+    &:hover{
+      color: $white;
+      position: relative;
+      z-index: 1;
+
+      &:after{
+        opacity: 1;
+
+        @include media(">=mobile"){
+          left: -20px;
+          right: -20px;
+          top: -20px;
+          bottom: -20px;
+        }
+      }
+
+      .price{
+        color: $white;
+      }
+    }
+  }
+}

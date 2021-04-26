@@ -1,0 +1,22 @@
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/helpers';
+
+@import './layout/base';
+@import './layout/header';
+@import './layout/banner';
+@import './layout/service';
+@import './layout/about';
+@import './layout/price-block';
+@import './layout/steps-block';
+@import './layout/clients-block';
+@import './layout/newsletter-block';
+@import './layout/footer';
+

@@ -1,0 +1,77 @@
+// Colors
+
+$breakpoints: (
+  'small-mobile': 480px,
+  'mobile': 768px,
+  'tablet': 980px,
+  'desktop': 1024px,
+  'large': 1200px
+);
+
+// ligatured operators ≥ ≤
+
+$black: #000;
+$white: #fff;
+$green: #7cd59c;
+$yellow: #ffbb42;
+$yellow-black: #e7ad48;
+$gray: #6b6b6b;
+$gray-light: #868686;
+$gray-lighter: #e7edf3;
+$red: #f00;
+$brown: #634613;
+$brown-light: #f6772c;
+$blue: #709dca;
+$blue-light: #ccd5df;
+$blue-dark: #394b50;
+
+$base-font-regular: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$lato-font-regular: 'Lato', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+// Body
+$base-text-color: $black;
+$base-background-color: $white;
+$font-size-base: 14px;
+$line-height-base: 20px;
+$line-height-title: 1;
+$base-font-family: $base-font-regular;
+
+$vertical-rhythm: ($line-height-base * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: $red;
+
+// Buttons
+$btn-color: $white;
+$btn-background: $black;
+$btn-padding: 0.4em 0.7em;
+$btn-font-size: inherit;
+
+// Forms
+$form-element-padding: $btn-padding;
+$form-element-border-color: $gray;
+$form-element-focus-border-color: $black;
+$placeholder-color: $gray;
+
+// Headers
+$h1-font-size: 66px;
+$h2-font-size: 27px;
+$h3-font-size: 24px;
+$h4-font-size: 21px;
+$h5-font-size: 17px;
+$h6-font-size: 15px;
+
+$headings-font-family: inherit;
+$headings-color: inherit;
+
+
+$animation-speed: 0.3s;
+
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

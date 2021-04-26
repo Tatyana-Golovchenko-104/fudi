@@ -1,0 +1,100 @@
+.newsletter-block{
+  padding: 40px 0 15px;
+
+  @include media(">=mobile"){
+    padding: 100px 0;
+  }
+
+  .form-quote{
+    input{
+      width: 100%;
+      border: $gray-light 1px solid;
+
+      @include media(">=mobile"){
+        width: 250px;
+      }
+    }
+  }
+}
+
+.map-block{
+  text-align: center;
+  position: relative;
+}
+
+.map{
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media(">=mobile"){
+    min-height: 500px;
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.address{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+}
+
+.address-text{
+  background: $blue-dark;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  position: relative;
+  margin: 0 0 20px;
+  font: 13px/20px $lato-font-regular;
+  color: $gray-light;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &:after{
+    content:'';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid $blue-dark;
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .title{
+    color: $white;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .tell a{
+    color: $gray-light;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  address{
+    font-style: normal;
+  }
+
+  .email{
+    color: $yellow;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

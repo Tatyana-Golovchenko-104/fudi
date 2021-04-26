@@ -1,0 +1,45 @@
+// Typography:
+$main-sans-serif: Helvetica, Arial, sans-serif;
+$main-serif: "Times New Roman", Times, serif;
+$browser-context: 16px;
+$base-line-height: 1.2;
+
+// Responsive breakpoints. "Include media" settings.
+$breakpoints: (
+  small-mobile: 480px,
+  mobile: 768px,
+  tablet: 980px,
+  desktop: 1024px,
+  large: 1200px
+);
+
+// list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+// clearfix
+%clearfix {
+ &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+@mixin horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .container {
+    background: #000;
+  }
+}
